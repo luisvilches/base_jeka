@@ -65,6 +65,7 @@ export default {
         <br>
         <Banners />
     </div>
+    <img src="../assets/banners/6.jpg" class="img-fluid" alt="">
   </div>
 </template>
 
