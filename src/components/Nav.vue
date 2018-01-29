@@ -125,9 +125,9 @@ export default {
     }
 
 
-    .navbar-nav .nav-link {
+    /*.navbar-nav .nav-link {
         color: #111;
         padding-right: 0;
         padding-left: 0;
-    }
+    }*/
 </style>
