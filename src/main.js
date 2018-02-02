@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import store from './store'
 
 Vue.use(VueRouter)
 
@@ -23,10 +24,10 @@ const router = new VueRouter({
   mode: 'history',
   routes
 })
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  store,
   router,
   template: '<App/>',
   components: { App }

@@ -1,15 +1,20 @@
 <script>
+import { mapState, mapMutations } from 'vuex'
 import Navbar from './components/Nav'
 import Footer from './components/footer'
-
 export default {
   name: 'app',
   data () {
     return {
       title: 'ibatidos',
-      status: true
+      status: null
     }
   },
+  created () {
+    this.status = this.$store.state.statusLogin
+  },
+  computed: mapState(['statusLogin']),
+  methods: mapMutations(['loginChange']),
   components: {
     Navbar,
     Footer
@@ -19,6 +24,7 @@ export default {
 
 <template>
   <div id="app">
+    <button v-on:click="loginChange()">clikme</button>
     <div class="boxshadow">
       <Navbar :loginState="status"/>
       <router-view></router-view>
