@@ -6,14 +6,15 @@ export default {
   name: 'app',
   data () {
     return {
-      title: 'ibatidos',
+      title: null,
       status: null
     }
   },
   created () {
     this.status = this.$store.state.statusLogin
+    this.title = this.$store.state.title
   },
-  computed: mapState(['statusLogin']),
+  computed: mapState(['statusLogin', 'title']),
   methods: mapMutations(['loginChange']),
   components: {
     Navbar,
@@ -24,7 +25,6 @@ export default {
 
 <template>
   <div id="app">
-    <button v-on:click="loginChange()">clikme</button>
     <div class="boxshadow">
       <Navbar :loginState="status"/>
       <router-view></router-view>
