@@ -28,7 +28,7 @@ export default {
                         <router-link class="nav-link" to="/contact">Contacto</router-link>
                     </li>
                     <li class="shop hidden-xs hidden-sm">
-                        <router-link class="nav-link" to="/shop"><i class="fa fa-shopping-bag" aria-hidden="true"></i></router-link>
+                        <router-link class="nav-link" to="/shop"><i class="fa fa-shopping-bag" aria-hidden="true"></i><span class="badge badge-light">0</span></router-link>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0 hidden-xs hidden-sm">
@@ -41,7 +41,7 @@ export default {
                     </li>
                 </ul>
                 <ul class="navbar-nav" v-else="loginState">
-                    <li class="nav-item nav-link"> <router-link to="/register">Registrar</router-link> / <router-link to="login">Iniciar</router-link></li>
+                    <li class="nav-item nav-link"> <router-link to="/register">Registrar</router-link> <span class="slash">|</span> <router-link to="login">Iniciar Sesion</router-link></li>
                 </ul>
             </div>
         </nav>
@@ -49,6 +49,10 @@ export default {
 </template>
 
 <style scoped>
+
+    .slash{
+        color: #fff;
+    }
     nav.navtop{
         height: 30px;
         background: #409e2d;
