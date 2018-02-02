@@ -8,23 +8,23 @@ export default {
 <template>
     <footer>
         <div class="container-fluid">
-            <div class="row contactinfo">
+            <div class="row contactinfo text-center">
                 <div class="col-md-4">
                     <ul>
-                    <li><i class="fa fa-phone" aria-hidden="true"></i></li>
-                    <li>+56 9 8492 3552</li>
+                        <li><i class="material-icons">phone</i></li>
+                        <li>+56 9 8492 3552</li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <ul>
-                    <li><i class="fa fa-life-ring" aria-hidden="true"></i></li>
-                    <li>informacion@ibatido.cl</li>
+                        <li><i class="material-icons">mail_outline</i></li>
+                        <li>informacion@ibatido.cl</li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <ul>
-                    <li><i class="fa fa-clock-o" aria-hidden="true"></i></li>
-                    <li>Lun - Vie / 09:00 - 18:00</li>
+                        <li><i class="material-icons">schedule</i></li>
+                        <li>Lun - Vie / 09:00 - 18:00</li>
                     </ul>
                 </div>
                 </div>
@@ -65,6 +65,10 @@ export default {
 </template>
 
 <style scoped>
+
+    footer .contactinfo ul{
+        margin-left: -50px;
+    }
     footer .contactinfo ul li i{
         color: #47AD33;
         font-size: 50px;
@@ -178,6 +182,10 @@ export default {
         font-size: 10px;
         color: #fff;
         font-family: "AvenirNextLTPro-Regular";
+    }
+
+    .logo{
+        text-align: center!important;
     }
 
     @media (max-width:768px){

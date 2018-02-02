@@ -19,17 +19,26 @@ export default {
 
 <template>
   <div id="app">
-    <Navbar :loginState="status"/>
-    <router-view></router-view>
-    <Footer/>
+    <div class="boxshadow">
+      <Navbar :loginState="status"/>
+      <router-view></router-view>
+      <Footer/>
+    </div>
   </div>
 </template>
 
 
 <style>
-  body,html,#app{
-    margin:0;
-    padding: 0;
+  #app{
+    padding: 40px;
+  }
+
+  body{
+    background: #f6f6fc;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .boxshadow{
+    box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.2);
   }
 
 

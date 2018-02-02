@@ -17,11 +17,11 @@ export default {
 
                 <div class='product--green'>
                     <div class='product_inner relative'>
-                        <img :src="item.img" width='300'>
+                        <img :src="item.img" width='200'>
                         <div class="desc">
                             <p class="desc1">{{item.name}}</p>
                             <p class="desc2"><b>${{item.price}}</b></p>
-                            <button class="desc3">Agregar al carrito</button>
+                            <button class="desc3"><i class="material-icons">shopping_cart</i> Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
@@ -32,14 +32,16 @@ export default {
 
 <style scoped>
 
+    h2{
+        font-size: 25px;
+    }
     
     .product, .product--blue, .product--orange, .product--red, .product--green, .product--yellow, .product--pink {
-
-        border:1px solid #47AD33;
+        box-shadow: 0px 0px 50px 0px rgba(200,200,200,0.6);
         height: auto;
-        min-height: 488px;
-        /*max-height: 489px;*/
-        border-radius: 3px;
+        min-height: 460px;
+        max-height: 460px;
+        border-radius: 15px;
         padding: 2em;
         margin: 1em;
         overflow: hidden;
@@ -50,7 +52,7 @@ export default {
     }
     
     .product--green {
-        background: linear-gradient(-25deg, #47AD33 50%, rgba(255, 255, 255, 0.5) 50%);
+        background: linear-gradient(-25deg, #47AD33 60%, rgba(255, 255, 255, 0.5) 60%);
     }
     
     .product img, .product--blue img, .product--orange img, .product--red img, .product--green img, .product--yellow img, .product--pink img {
@@ -78,7 +80,7 @@ export default {
         width: 100%;
         color: #FFF;
         border-radius: 3px;
-        padding: 1em 3em;
+        padding: 10px 20px;
         margin: 1em 0 0 0;
         background: none;
         cursor: pointer;
@@ -89,17 +91,12 @@ export default {
         background: white;
         color: #2B2D42;
     }
-    .product_inner button:before {
-        font-family: FontAwesome;
-        content: '\f07A';
-        color: #FFF;
-        position: absolute;
-        font-size: 1.5em;
-        margin: -7px -1.5em;
+
+    .product_inner button i{
+        position: relative;
+        top: 5px;
     }
-    .product_inner button:hover:before {
-        color: #2B2D42;
-    }
+    
     .product_overlay {
         background: rgba(255, 255, 255, 0.9);
         width: 100%;
@@ -143,19 +140,19 @@ export default {
         position: absolute;
         left: 0;
         right: 0;
-        top:270px;
+        top:220px;
     }
     .desc2 {
         position: absolute;
         left: 0;
         right: 0;
-        top:335px;
+        top:310px;
     }
     .desc3 {
         position: absolute;
         left: 0;
         right: 0;
-        top:360px;
+        top:330px;
     }
 
 </style>

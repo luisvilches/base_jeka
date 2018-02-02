@@ -1,5 +1,5 @@
 <template>
-	<img class="img-fluid" src="http://3.bp.blogspot.com/-vp8dwYfCDAw/VhG8jk-FwOI/AAAAAAAAAWM/_Q655VhgeWw/s960-r/banner4.jpg" alt="">
+	<img class="img-fluid" src="http://negociosrecomendadosklob.com/wp-content/uploads/2014/10/banner_EV_face1-1413590183.jpg" alt="">
 </template>
 <script>
 	export default {

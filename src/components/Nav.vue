@@ -61,7 +61,7 @@ export default {
     nav.navbar{
         border-top: 2px solid #47AD33;
         border-bottom: 3px solid #47AD33;
-        background: linear-gradient(-30deg, #47AD33 75%, rgba(255, 255, 255, 0.5) 75%);
+        background: linear-gradient(-55deg, #47AD33 79%, rgba(255, 255, 255, 0.5) 79%);
     }
     .navbar-brand img{
         max-width: 200px;

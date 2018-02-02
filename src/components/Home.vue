@@ -53,7 +53,7 @@ export default {
 <template>
   <div>
     <Header />
-    <div class="container-fluid">
+    <div class="container-fluid bgWhite">
         <div class="row">
             <div class="col-md-12 title">
                 <br>
@@ -84,10 +84,17 @@ export default {
   .title{
         padding: 30px;
     }
+  .title h2{
+    font-size: 25px;
+  }
 
     hr{
         max-width: 100px;
         border: 2px solid #47AD33;
+    }
+
+    .bgWhite{
+      background: #fff;
     }
 
 </style>
