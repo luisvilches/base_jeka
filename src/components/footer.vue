@@ -39,10 +39,10 @@ export default {
                 <div class="col-md-3">
                     <ul>
                     <li class="title">Productos destacados</li>
-                    <li><a href="">producto 1</a></li>
-                    <li><a href="">producto 2</a></li>
-                    <li><a href="">producto 3</a></li>
-                    <li><a href="">producto 4</a></li>
+                    <li><a href="">Batido Nutricional</a></li>
+                    <li><a href="">Te Bebida Instantánea</a></li>
+                    <li><a href="">Aloé</a></li>
+                    <li><a href="">Quemador de Grasa</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
@@ -189,12 +189,22 @@ export default {
     }
 
     @media (max-width:768px){
-        footer .footerinfo .col-md-3{
-            text-align:center;
-        }
+
 
         footer .footerinfo ul{
             padding:0;
+        }
+
+        footer,.contactinfo,.footerinfo,.logo{
+            text-align: left !important;
+        }
+
+        .contactinfo,.footerinfo{
+            padding-left: 20px;
+        }
+
+        footer .contactinfo ul{
+            margin-left: -35px;
         }
     }
 
