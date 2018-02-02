@@ -63,7 +63,6 @@ export default {
         </div>
         <Productos :products="products" />
         <br>
-        <Banners />
     </div>
     <img src="../assets/banners/6.jpg" class="img-fluid" alt="">
   </div>

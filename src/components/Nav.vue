@@ -116,6 +116,13 @@ export default {
             color: #fff !important;
             font-size: 30px;
         }
+
+        .fa.fa-bars{
+            color: #fff;
+        }
+        .navbar-nav .nav-link{
+            color: #47AD33;
+        }
     }
 
      @media (min-width:768px){

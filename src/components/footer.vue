@@ -85,7 +85,7 @@ export default {
     footer .contactinfo,footer .footerinfo{
         padding-bottom: 20px; 
         border-bottom: 1px solid #32373d;
-        background: #111;
+        background: #200200;
     }
 
     footer .footerinfo{

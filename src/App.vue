@@ -41,5 +41,10 @@ export default {
     box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.2);
   }
 
+  @media (max-width:768px){
+    #app{
+      padding: 5px;
+    }
+  }
 
 </style>
