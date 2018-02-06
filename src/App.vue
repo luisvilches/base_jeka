@@ -4,18 +4,8 @@ import Navbar from './components/Nav'
 import Footer from './components/footer'
 export default {
   name: 'app',
-  data () {
-    return {
-      title: null,
-      status: null
-    }
-  },
-  created () {
-    this.status = this.$store.state.statusLogin
-    this.title = this.$store.state.title
-  },
   computed: mapState(['statusLogin', 'title']),
-  methods: mapMutations(['loginChange']),
+  methods: mapMutations(['LOGIN', 'SETLOGINSTATE']),
   components: {
     Navbar,
     Footer
@@ -26,7 +16,7 @@ export default {
 <template>
   <div id="app">
     <div class="boxshadow">
-      <Navbar :loginState="status"/>
+      <Navbar :loginState="statusLogin"/>
       <router-view></router-view>
       <Footer/>
     </div>

@@ -1,26 +1,9 @@
 <script>
+import { mapState, mapMutations } from 'vuex'
 export default {
   name: 'shop',
-  data () {
-    return {
-      cart: []
-    }
-  },
-  created () {
-    this.cargarShop()
-  },
-  methods: {
-    cargarShop: function () {
-      this.cart = [
-        {
-          img: 'http://www.figuraypeso.com/Img_hlf/portada/productos-desayuno.png',
-          name: 'Herbalife, Batido Nutricional',
-          price: '29.200',
-          description: 'DELICIOSO ALIMENTO EN POLVO HERBALIFE QUE SE RECONSTITUYE CON CUALQUIER TIPO DE LÍQUIDO (AGUA, JUGO, YOGURT O LECHE DESCREMADA).'
-        }
-      ]
-    }
-  }
+  computed: mapState(['shop']),
+  methods: mapMutations(['LOGIN', 'SETLOGINSTATE'])
 }
 </script>
 
@@ -39,14 +22,12 @@ export default {
     </ul>
     <ul class="cartWrap">
       
-        <li class="items even" v-for="(item,index) in cart" :key="index">
+        <li class="items even" v-for="(item,index) in shop" :key="index">
             <div class="infoWrap"> 
                 <div class="cartSection">
                     <img :src="item.img" alt="" class="itemImg" />
                     <p class="itemNumber">#QUE-007544-002</p>
                     <h3>{{item.name}}</h3>
-                    <p> <input type="text"  class="qty" placeholder="3"/> x ${{item.price}}</p>
-                    <p class="stockStatus"> En Stock</p>
                 </div>  
                 <div class="prodTotal cartSection">
                     <p>${{item.price}}</p>

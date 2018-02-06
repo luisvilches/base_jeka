@@ -1,7 +1,10 @@
 <script>
+import { mapState, mapMutations } from 'vuex'
 export default {
   name: 'Navbar',
-  props: ['loginState']
+  props: ['loginState'],
+  computed: mapState(['totalShop']),
+  methods: mapMutations(['LOGIN', 'SETLOGINSTATE'])
 }
 </script>
 
@@ -28,7 +31,7 @@ export default {
                         <router-link class="nav-link" to="/contact">Contacto</router-link>
                     </li>
                     <li class="shop hidden-xs hidden-sm">
-                        <router-link class="nav-link" to="/shop"><i class="fa fa-shopping-bag" aria-hidden="true"></i><span class="badge badge-light">0</span></router-link>
+                        <router-link class="nav-link" to="/shop"><i class="fa fa-shopping-bag" aria-hidden="true"></i><span class="badge badge-light">{{totalShop}}</span></router-link>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0 hidden-xs hidden-sm">

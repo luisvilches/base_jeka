@@ -1,11 +1,9 @@
 <script>
+import { mapState, mapMutations } from 'vuex'
 export default {
   name: 'productos',
-  data () {
-    return {
-      products: []
-    }
-  },
+  computed: mapState(['totalShop', 'title']),
+  methods: mapMutations(['ADD']),
   props: ['products']
 }
 </script>
@@ -21,7 +19,7 @@ export default {
                         <div class="desc">
                             <p class="desc1">{{item.name}}</p>
                             <p class="desc2"><b>${{item.price}}</b></p>
-                            <button class="desc3"><i class="material-icons">shopping_cart</i> Agregar al carrito</button>
+                            <button class="desc3" v-on:click="ADD({name: item.name,price:item.price})"><i class="material-icons">shopping_cart</i> Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
@@ -80,7 +78,7 @@ export default {
         width: 100%;
         color: #FFF;
         border-radius: 3px;
-        padding: 10px 20px;
+        padding: 10px 5px;
         margin: 1em 0 0 0;
         background: none;
         cursor: pointer;
